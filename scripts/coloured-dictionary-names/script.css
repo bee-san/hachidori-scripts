@@ -1,0 +1,7 @@
+/* SPDX-License-Identifier: GPL-3.0-or-later */
+/* Coloured dictionary names: at lightness 0.52, white text has a contrast of at
+   least 5:1 on every hue, gamut-mapped into sRGB (5.17:1 at worst, hue 155). */
+.gsm-hoshidicts-dictionary-tag.hd-dictionary-colour {
+  background: var(--hd-dictionary-colour, oklch(0.52 0.13 var(--hd-dictionary-hue, 300)));
+  color: #fff;
+}

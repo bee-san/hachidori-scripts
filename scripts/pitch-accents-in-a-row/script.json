@@ -1,0 +1,8 @@
+{
+  "schema": 1,
+  "name": "Pitch accents in a row",
+  "description": "Shows the pitch accent dictionaries side by side under the headword, wrapping onto the next line when the popup runs out of room, instead of one numbered line each.",
+  "author": "bee-san",
+  "version": "1.0.0",
+  "license": "GPL-3.0-or-later"
+}

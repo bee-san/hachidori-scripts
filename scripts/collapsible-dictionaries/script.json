@@ -1,0 +1,8 @@
+{
+  "schema": 1,
+  "name": "Collapsible dictionaries",
+  "description": "Folds each dictionary in the popup to its name and the start of its first definition. Each word's first dictionary opens, and a dictionary you open or close stays that way until you reload the page.",
+  "author": "bee-san",
+  "version": "1.0.0",
+  "license": "GPL-3.0-or-later"
+}

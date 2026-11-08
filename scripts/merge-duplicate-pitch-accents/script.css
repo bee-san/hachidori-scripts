@@ -1,0 +1,13 @@
+/* SPDX-License-Identifier: GPL-3.0-or-later */
+/* A merged dictionary's line stays hidden, whatever else lays the lines out
+   (Pitch accents in a row shows every line). */
+.hd-pitch-merged > .pronunciation-group[hidden] {
+  display: none;
+}
+/* The names on a merged line sit together. */
+.hd-pitch-merged .pronunciation-group-tag-list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  vertical-align: middle;
+}

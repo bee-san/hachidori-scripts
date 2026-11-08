@@ -1,0 +1,28 @@
+/* SPDX-License-Identifier: GPL-3.0-or-later */
+/* Pitch accents in a row (bee-san/hachidori#642): each pitch accent
+   dictionary's patterns sit side by side under the headword, wrapping onto the
+   next line when the popup runs out of room, instead of one numbered line per
+   dictionary. */
+.gsm-hoshidicts-pitch-metadata .pronunciation-group-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 14px;
+  padding-left: 0;
+  list-style: none;
+}
+.gsm-hoshidicts-pitch-metadata .pronunciation-group {
+  display: block;
+}
+/* A dictionary with several patterns keeps them on its line. */
+.gsm-hoshidicts-pitch-metadata .pronunciation-list {
+  display: inline;
+  padding-left: 0;
+  list-style: none;
+}
+.gsm-hoshidicts-pitch-metadata .pronunciation-list .pronunciation {
+  display: inline;
+}
+.gsm-hoshidicts-pitch-metadata .pronunciation-list .pronunciation + .pronunciation {
+  margin-left: 0.6em;
+}
