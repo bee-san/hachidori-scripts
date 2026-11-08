@@ -1,0 +1,8 @@
+{
+  "schema": 1,
+  "name": "Merge duplicate pitch accents",
+  "description": "Lists a word's pitch accent once when several dictionaries give exactly the same patterns, with every one of those dictionaries' names on that line.",
+  "author": "bee-san",
+  "version": "1.0.0",
+  "license": "GPL-3.0-or-later"
+}

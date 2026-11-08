@@ -1,0 +1,65 @@
+/* SPDX-License-Identifier: GPL-3.0-or-later */
+/* Collapsible dictionaries: the toggle beside a dictionary's name, and a closed
+   card that keeps its name, tags and the start of its first definition. */
+.hd-collapse-head {
+  align-items: center;
+  cursor: pointer;
+}
+.hd-collapse-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin: 0 4px 0 -4px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: none;
+  color: inherit;
+  opacity: 0.65;
+  cursor: pointer;
+}
+.hd-collapse-toggle:hover,
+.hd-collapse-toggle:focus-visible {
+  opacity: 1;
+  background: color-mix(in srgb, currentColor 12%, transparent);
+}
+.hd-collapse-toggle svg {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 120ms ease;
+}
+.hd-collapsible[data-hd-open="true"] .hd-collapse-toggle svg {
+  transform: rotate(90deg);
+}
+.hd-collapse-preview {
+  display: none;
+}
+.hd-collapsible[data-hd-open="false"] .hd-collapse-head {
+  flex-wrap: nowrap;
+}
+.hd-collapsible[data-hd-open="false"] .hd-collapse-preview {
+  display: block;
+  flex: 1 1 0;
+  min-width: 0;
+  margin-left: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  opacity: 0.7;
+  font-size: 0.9em;
+}
+.hd-collapsible[data-hd-open="false"] .gsm-hoshidicts-glossary-content,
+.hd-collapsible[data-hd-open="false"] .definition-item ~ .definition-item {
+  display: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hd-collapse-toggle svg { transition: none; }
+}

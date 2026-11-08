@@ -1,0 +1,8 @@
+{
+  "schema": 1,
+  "name": "Coloured dictionary names",
+  "description": "Gives each dictionary's name on its cards a colour of its own, the same on every word, so you can tell your dictionaries apart at a glance.",
+  "author": "bee-san",
+  "version": "1.0.0",
+  "license": "GPL-3.0-or-later"
+}
