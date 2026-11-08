@@ -1,0 +1,8 @@
+{
+  "schema": 1,
+  "name": "Texthooker",
+  "description": "Turns the search page into a texthooker: the lines it keeps, newest at the bottom, with counts and times, a pause for the Clipboard monitor, and Edit and Delete on each line.",
+  "author": "bee-san",
+  "version": "1.0.0",
+  "license": "GPL-3.0-or-later"
+}
