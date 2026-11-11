@@ -3,6 +3,6 @@
   "name": "Jimaku Player",
   "description": "Japanese subtitles from jimaku.cc over Crunchyroll's player, synced with one key, for Hachidori to look up; with Crunchyroll mining on, notes get each line's audio and animation.",
   "author": "mgp25 (Jimaku Player Reloaded), adapted by bee-san",
-  "version": "2.7.0-hachidori.1",
+  "version": "2.7.0-hachidori.2",
   "license": "ISC"
 }
