@@ -1,0 +1,8 @@
+{
+  "schema": 1,
+  "name": "Netflix Subtitle Sidebar",
+  "description": "Shows Netflix subtitles beside the player and keeps recent lines available for Hachidori lookup.",
+  "author": "bee-san",
+  "version": "1.0.0",
+  "license": "GPL-3.0-or-later"
+}

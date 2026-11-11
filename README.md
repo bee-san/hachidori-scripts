@@ -16,6 +16,7 @@ replaces it.
 | [Coloured dictionary names](scripts/coloured-dictionary-names) | Gives each dictionary's name a colour of its own, the same on every word. |
 | [Jimaku Player](scripts/jimaku-player) | Japanese subtitles from jimaku.cc over Crunchyroll's player, synced with one key, for Hachidori to look up; with Crunchyroll mining on, notes get each line's audio and animation. |
 | [Merge duplicate pitch accents](scripts/merge-duplicate-pitch-accents) | Lists a pitch accent once when several dictionaries give exactly the same patterns, with all their names. |
+| [Netflix Subtitle Sidebar](scripts/netflix-subtitle-sidebar) | Shows Netflix subtitles beside the player and keeps recent lines available for Hachidori lookup. |
 | [Pitch accents in a row](scripts/pitch-accents-in-a-row) | Shows the pitch accent dictionaries side by side under the headword instead of one line each. |
 | [Texthooker](scripts/texthooker) | Turns the search page into a texthooker: the lines it keeps, with counts and times, a pause for the Clipboard monitor, and Edit and Delete on each line. |
 
