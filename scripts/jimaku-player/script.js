@@ -1,4 +1,10 @@
 // SPDX-License-Identifier: ISC
+
+// Configuration: paste your key from https://jimaku.cc/profile between the quotes.
+// A key saved in Jimaku Player's Settings takes precedence over this default.
+// Keep this empty in published copies; never share a script containing your key.
+const JIMAKU_API_KEY = '';
+
 //
 // Jimaku Player Reloaded 2.7.0 for Hachidori: Japanese subtitles from
 // jimaku.cc over Crunchyroll's player, which Hachidori looks up like any text
@@ -119,7 +125,7 @@
 		history: [],
 		currentSubIndex: -1,
 		detected: null,
-		apiKey: get(KEYS.apiKey, ''),
+		apiKey: get(KEYS.apiKey, JIMAKU_API_KEY.trim()),
 		preferAss: get(KEYS.preferAss, true),
 		fontScale: get(KEYS.fontScale, 1),
 		position: get(KEYS.position, 'bottom'),

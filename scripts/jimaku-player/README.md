@@ -26,6 +26,19 @@ Hachidori user script. The ISC licence is at the top of `script.js`.
    keeps it in crunchyroll.com's storage in this browser, where Crunchyroll's
    own page could read it, and sends it only to jimaku.cc.
 
+Alternatively, edit the installed script in Hachidori's **Your scripts** and
+paste your key between the quotes in `const JIMAKU_API_KEY = '';` near the top.
+**Save script**, then reload Crunchyroll. This supplies the default when no key
+has been saved in the player's Settings; a saved value takes precedence, even
+if you saved an empty value. To change a previously saved key, use the player's
+Settings.
+
+Editing the installed script makes it your own copy, so the Script Store stops
+offering updates for it. A key entered in the script is included wherever
+Hachidori carries your user scripts, including backups and linked browsers.
+Keep it out of shared scripts and commits. Loading a local subtitle file from
+**File** needs no API key.
+
 ## Watch with subtitles
 
 1. Press **J**. **Browse** has the show and episode filled in from the page;
