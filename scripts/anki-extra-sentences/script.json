@@ -1,0 +1,8 @@
+{
+  "schema": 1,
+  "name": "Anki extra sentences",
+  "description": "Fetches example sentences from your JSON API on Add and exports them as {preparation-examples}. Configure the endpoint at the top of the script.",
+  "author": "bee-san",
+  "version": "1.0.0",
+  "license": "GPL-3.0-or-later"
+}
