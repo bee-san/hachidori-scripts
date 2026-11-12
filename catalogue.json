@@ -2,6 +2,26 @@
   "schema": 1,
   "scripts": [
     {
+      "slug": "anki-api-summary",
+      "name": "Anki API summary",
+      "description": "Fetches a short definition summary from your JSON API when you add a card. Configure the endpoint, then use {preparation-summary} in an Anki Template.",
+      "author": "bee-san",
+      "version": "1.0.0",
+      "license": "GPL-3.0-or-later",
+      "javascript": "// SPDX-License-Identifier: GPL-3.0-or-later\n// Configuration: set your JSON API's address and optional bearer key here.\nconst API_URL = \"\";\nconst API_KEY = \"\";\n\nif (!globalThis.HDAnkiPreparation) return;\n\nHDAnkiPreparation.register(\"summary\", async (context, { request }) => {\n  if (!API_URL) throw new Error(\"Set API_URL in the Anki API summary script.\");\n  const response = await request(API_URL, {\n    method: \"POST\",\n    headers: { \"Content-Type\": \"application/json\", ...(API_KEY ? { Authorization: `Bearer ${API_KEY}` } : {}) },\n    body: JSON.stringify({ word: context.term.expression, reading: context.term.reading, sentence: context.sentence }),\n  });\n  if (!response.ok) throw new Error(\"The summary API did not accept the request.\");\n  const data = await response.json();\n  if (typeof data.summary !== \"string\") throw new Error(\"The summary API must return a summary string.\");\n  return { summary: data.summary };\n});\n",
+      "css": ""
+    },
+    {
+      "slug": "anki-extra-sentences",
+      "name": "Anki extra sentences",
+      "description": "Fetches example sentences from your JSON API on Add and exports them as {preparation-examples}. Configure the endpoint at the top of the script.",
+      "author": "bee-san",
+      "version": "1.0.0",
+      "license": "GPL-3.0-or-later",
+      "javascript": "// SPDX-License-Identifier: GPL-3.0-or-later\n// Configuration: set your sentence API's address and optional bearer key here.\nconst API_URL = \"\";\nconst API_KEY = \"\";\n\nif (!globalThis.HDAnkiPreparation) return;\n\nHDAnkiPreparation.register(\"examples\", async (context, { request }) => {\n  if (!API_URL) throw new Error(\"Set API_URL in the Anki extra sentences script.\");\n  const address = new URL(API_URL);\n  address.searchParams.set(\"word\", context.term.expression);\n  address.searchParams.set(\"reading\", context.term.reading);\n  const response = await request(address.href, { headers: API_KEY ? { Authorization: `Bearer ${API_KEY}` } : {} });\n  if (!response.ok) throw new Error(\"The sentence API did not accept the request.\");\n  const data = await response.json();\n  if (!Array.isArray(data.sentences) || data.sentences.some(sentence => typeof sentence !== \"string\")) {\n    throw new Error(\"The sentence API must return a sentences array of strings.\");\n  }\n  return { examples: data.sentences.join(\"\\n\") };\n});\n",
+      "css": ""
+    },
+    {
       "slug": "collapsible-dictionaries",
       "name": "Collapsible dictionaries",
       "description": "Folds each dictionary in the popup to its name and the start of its first definition. Each word's first dictionary opens, and a dictionary you open or close stays that way until you reload the page.",

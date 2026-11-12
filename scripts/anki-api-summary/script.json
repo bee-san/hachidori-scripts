@@ -1,0 +1,8 @@
+{
+  "schema": 1,
+  "name": "Anki API summary",
+  "description": "Fetches a short definition summary from your JSON API when you add a card. Configure the endpoint, then use {preparation-summary} in an Anki Template.",
+  "author": "bee-san",
+  "version": "1.0.0",
+  "license": "GPL-3.0-or-later"
+}
